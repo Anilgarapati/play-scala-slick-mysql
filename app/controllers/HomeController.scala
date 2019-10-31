@@ -27,7 +27,7 @@ class HomeController @Inject()(cc: ControllerComponents, userService: UserServic
       },
       data => {
         val newUser = User(0, data.firstName, data.lastName, data.mobile, data.email)
-        userService.addUser(newUser).map( _ => Redirect(routes.HomeController.index()))
+        userService.addUser(newUser).map(_ => Redirect(routes.HomeController.index()))
       })
   }
 
